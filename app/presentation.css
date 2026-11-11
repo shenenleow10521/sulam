@@ -1,0 +1,677 @@
+.presenter {
+  --slide-accent: #2a635d;
+  --slide-wash: #eaf1e9;
+  --slide-edge: clamp(14px, 3.25vw, 62px);
+  --slide-gap: clamp(14px, 2.3svh, 26px);
+  --slide-copy: #435950;
+  background: radial-gradient(ellipse at 100% 5%, var(--slide-wash), transparent 65%), #f1eee3;
+  color: #193431;
+}
+
+.presenter[data-slide="purpose"],
+.presenter[data-slide="investment"],
+.presenter[data-slide="legacy"] {
+  --slide-accent: #914c35;
+  --slide-wash: #f6e8d7;
+}
+
+.presenter[data-slide="objectives"],
+.presenter[data-slide="demonstration"],
+.presenter[data-slide="impact"] {
+  --slide-accent: #285e76;
+  --slide-wash: #e6eff2;
+}
+
+.presenter-header {
+  height: 57px;
+  padding-inline: var(--slide-edge);
+  background: #fcfaf1;
+  border-color: #d8d9cb;
+}
+
+.presenter-header .brand {
+  gap: 10px;
+}
+
+.presenter-header .brand > span {
+  font-size: 16px;
+}
+
+.presenter-sub,
+.presenter-label {
+  color: #58685d;
+}
+
+.presenter-scenes {
+  margin: 12px var(--slide-edge) 10px;
+  isolation: isolate;
+  border: 1px solid #dbded1;
+  border-radius: 18px;
+  background: #fffcf268;
+  box-shadow: 0 10px 32px #31412e0c;
+  scrollbar-width: thin;
+  scrollbar-color: #adb8a8 transparent;
+}
+
+.presenter-scenes > .transition-frame {
+  position: relative;
+}
+
+.presenter-scene {
+  padding: clamp(18px, 4svh, 46px) 0;
+}
+
+.presenter .section-content,
+.presenter .hero-inner {
+  width: min(91%, 1320px);
+}
+
+.presenter h2,
+.presenter .legacy-content h2 {
+  color: #193431;
+  font-size: clamp(32px, 3.9vw, 59px);
+  font-weight: 800;
+  letter-spacing: -.047em;
+  line-height: 1.03;
+}
+
+.presenter h2 em {
+  color: var(--slide-accent);
+}
+
+.presenter .eyebrow {
+  color: var(--slide-accent);
+  font-size: 10px;
+  letter-spacing: .13em;
+  font-weight: 900;
+  margin-bottom: clamp(12px, 2svh, 20px);
+}
+
+.presenter .eyebrow::before {
+  content: "";
+  height: 2px;
+  width: 22px;
+  background: currentColor;
+}
+
+.presenter .eyebrow-number {
+  display: none;
+}
+
+.presenter .section-lead,
+.presenter .section-title-row > p {
+  color: var(--slide-copy);
+  font-size: clamp(13px, 1.2vw, 17px);
+  line-height: 1.48;
+  margin-top: 12px;
+}
+
+.presenter .small-label,
+.presenter .fine-print,
+.presenter .hero-bottom small,
+.presenter .hero-fact-label,
+.presenter .control-tools,
+.presenter .presenter-sub {
+  color: #53675b;
+}
+
+.presenter .fine-print {
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.presenter .inline-note,
+.presenter .evidence-note,
+.presenter .delivery-bottom,
+.presenter .team-bottom,
+.presenter .equipment-line,
+.presenter .impact-bottom,
+.presenter .care-note {
+  margin-top: var(--slide-gap);
+  padding-top: 13px;
+  border-color: #c9d3c7;
+  color: var(--slide-copy);
+}
+
+.presenter .inline-note p,
+.presenter .evidence-note p,
+.presenter .delivery-bottom p,
+.presenter .impact-bottom p,
+.presenter .care-note {
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--slide-copy);
+}
+
+.presenter .text-button {
+  color: var(--slide-accent);
+}
+
+.presenter .hero-copy h1 {
+  font-size: clamp(43px, min(5.5vw, 9svh), 88px);
+  line-height: 1.06;
+}
+
+.presenter .hero-intro {
+  font-size: clamp(15px, 1.45vw, 21px);
+  line-height: 1.38;
+  margin-top: clamp(16px, 3svh, 28px);
+}
+
+.presenter .hero-description {
+  font-size: clamp(13px, 1.18vw, 17px);
+  color: var(--slide-copy);
+  line-height: 1.5;
+  max-width: 45ch;
+}
+
+.presenter .hero-notebook {
+  color: var(--slide-copy);
+  font-size: 11px;
+}
+
+.presenter .hero-bottom {
+  border-color: #c9d3c7;
+  padding-top: 14px;
+}
+
+.presenter .hero-bottom strong {
+  font-size: clamp(13px, 1.2vw, 17px);
+}
+
+.presenter .hero-fact-label,
+.presenter .hero-bottom small {
+  font-size: 10px;
+}
+
+.presenter .purpose-pillars,
+.presenter .outcome-list,
+.presenter .phase-grid,
+.presenter .team-grid,
+.presenter .care-grid,
+.presenter .legacy-resources {
+  gap: clamp(12px, 1.6vw, 24px);
+  margin-top: var(--slide-gap);
+}
+
+.presenter .purpose-card,
+.presenter .outcome-row,
+.presenter .phase,
+.presenter .team-group,
+.presenter .care-item,
+.presenter .legacy-resource {
+  border: 1px solid #ccd8cd;
+  border-radius: 12px;
+  box-shadow: 0 5px 14px #263b3210;
+}
+
+.presenter .purpose-card,
+.presenter .outcome-row,
+.presenter .phase,
+.presenter .care-item {
+  padding: clamp(15px, 2vw, 26px);
+}
+
+.presenter .purpose-card h3,
+.presenter .outcome-row h3,
+.presenter .phase h3 {
+  color: #1b3734;
+  font-size: clamp(20px, 2.15vw, 32px);
+  letter-spacing: -.033em;
+  margin-bottom: 10px;
+}
+
+.presenter .purpose-card p,
+.presenter .outcome-row p,
+.presenter .care-item p,
+.presenter .phase li {
+  color: var(--slide-copy);
+  font-size: clamp(13px, 1.12vw, 16px);
+  line-height: 1.45;
+}
+
+.presenter .outcome-tag,
+.presenter .phase-foot {
+  color: var(--slide-accent);
+  font-size: 10px;
+  margin-top: auto;
+  padding-top: 13px;
+}
+
+.presenter .outcome-row {
+  gap: 6px;
+}
+
+.presenter .outcome-index {
+  margin: 0 0 6px;
+  color: #245e71;
+}
+
+.presenter .community-layout {
+  gap: clamp(25px, 5vw, 80px);
+}
+
+.presenter .community-panel {
+  padding: clamp(22px, 3vw, 40px);
+  border: 1px solid #bdcebb;
+  box-shadow: 0 8px 25px #33453112;
+}
+
+.presenter .community-panel h3 {
+  font-size: clamp(29px, 3.1vw, 46px);
+  line-height: 1.08;
+  color: #285349;
+}
+
+.presenter .community-panel > p:not(.fine-print),
+.presenter .community-type > p,
+.presenter .budget-hero > p {
+  font-size: clamp(13px, 1.22vw, 17px);
+  line-height: 1.5;
+  color: var(--slide-copy);
+}
+
+.presenter .age-display {
+  font-size: clamp(55px, 7vw, 104px);
+  margin-block: var(--slide-gap);
+}
+
+.presenter .age-label {
+  color: #53675b;
+  font-size: 10px;
+}
+
+.presenter .activity-tabs {
+  gap: 8px;
+  margin: var(--slide-gap) 0 0;
+}
+
+.presenter .activity-tabs button {
+  justify-content: center;
+  gap: 8px;
+  font-size: clamp(11px, 1.1vw, 15px);
+  border-radius: 9px 9px 0 0;
+  border-bottom-color: transparent;
+  color: #425950;
+  background-color: #edf0e9;
+}
+
+.presenter .activity-tabs button.selected {
+  color: #fffaf0;
+}
+
+.presenter .activity-tab-line {
+  background: var(--slide-accent);
+}
+
+.presenter .activity-panel {
+  border: 1px solid #cbd6cb;
+  border-radius: 0 0 13px 13px;
+  box-shadow: 0 8px 26px #273e3510;
+}
+
+.presenter .activity-body {
+  grid-template-columns: 1.04fr .96fr;
+  min-height: 0;
+  gap: clamp(20px, 4vw, 65px);
+  padding: clamp(18px, 3svh, 30px) clamp(18px, 3.1vw, 44px);
+}
+
+.presenter .activity-copy h3 {
+  font-size: clamp(24px, 2.5vw, 36px);
+  color: #193431;
+  margin: 9px 0;
+  line-height: 1.13;
+}
+
+.presenter .activity-statement {
+  font-size: clamp(14px, 1.36vw, 19px);
+}
+
+.presenter .activity-copy > p:not(.activity-statement),
+.presenter .activity-visual blockquote {
+  font-size: clamp(13px, 1.2vw, 16px);
+  color: var(--slide-copy);
+}
+
+.presenter .activity-visual svg {
+  max-height: min(22svh, 180px);
+}
+
+.presenter .activity-output {
+  color: #2a5c4f;
+  margin-top: 13px;
+  font-size: 12px;
+}
+
+.presenter .activity-panel-bottom {
+  padding: 10px clamp(18px, 3.1vw, 44px);
+}
+
+.presenter .activity-panel-bottom > span {
+  font-size: 9px;
+  color: var(--slide-copy);
+}
+
+.presenter .demo-layout {
+  grid-template-columns: minmax(0, .72fr) minmax(0, 1.28fr);
+  gap: clamp(24px, 4vw, 60px);
+  margin-top: var(--slide-gap);
+}
+
+.presenter .demo-side > p {
+  font-size: clamp(13px, 1.2vw, 16px);
+  color: var(--slide-copy);
+}
+
+.presenter .demo-window {
+  box-shadow: 0 10px 28px #253b3614;
+  border-color: #bfcfc8;
+}
+
+.presenter .window-top {
+  background: #e9eee6;
+}
+
+.presenter .demo-conversation {
+  min-height: clamp(225px, 31svh, 330px);
+}
+
+.presenter .user-message,
+.presenter .ai-message {
+  color: #2d4944;
+  font-size: clamp(13px, 1.18vw, 16px);
+}
+
+.presenter .phase-grid {
+  position: relative;
+}
+
+.presenter .phase {
+  border-top: 3px solid #5a8d7b;
+}
+
+.presenter .phase:nth-child(2) {
+  border-top-color: #648ba4;
+}
+
+.presenter .phase:nth-child(3) {
+  border-top-color: #bb7c50;
+}
+
+.presenter .phase > .small-label {
+  margin-top: 16px;
+  font-size: 9px;
+}
+
+.presenter .phase h3 {
+  margin-top: 8px;
+}
+
+.presenter .phase ul {
+  min-height: 110px;
+  gap: 7px;
+}
+
+.presenter .phase-foot {
+  margin-top: 12px;
+}
+
+.presenter .team-count > .animated-metric,
+.presenter .budget-total > .animated-metric {
+  color: inherit;
+}
+
+.presenter .team-group {
+  border-top: 3px solid #6c9581;
+  min-height: 0;
+  padding: clamp(12px, 1.5vw, 21px);
+}
+
+.presenter .team-group h3 {
+  min-height: 2.6em;
+  margin-bottom: 9px;
+  color: #1b3734;
+  font-size: clamp(14px, 1.25vw, 18px);
+}
+
+.presenter .team-group-head {
+  margin-bottom: 12px;
+}
+
+.presenter .team-people {
+  color: var(--slide-copy);
+  font-size: clamp(11px, 1vw, 14px);
+  line-height: 1.35;
+  gap: 7px;
+  margin-bottom: 12px;
+}
+
+.presenter .budget-layout {
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  gap: clamp(25px, 5vw, 75px);
+}
+
+.presenter .budget-breakdown {
+  background: #fffdf6;
+  border-color: #d7cbbb;
+  box-shadow: 0 8px 24px #4b342d0d;
+}
+
+.presenter .budget-total {
+  font-size: clamp(62px, 8vw, 122px);
+  color: #874632;
+}
+
+.presenter .budget-row {
+  padding-block: clamp(7px, 1.35svh, 13px);
+}
+
+.presenter .budget-row > span,
+.presenter .budget-reconcile p {
+  font-size: clamp(12px, 1.04vw, 15px);
+  color: #4c594a;
+}
+
+.presenter .budget-row strong {
+  color: #28493e;
+}
+
+.presenter .budget-reconcile p {
+  color: #654c25;
+}
+
+.presenter .budget-breakdown > .fine-print {
+  font-size: 10px;
+}
+
+.presenter .measurement-track {
+  margin-block: var(--slide-gap);
+  border-color: #c0d3d9;
+  background: #e9f0f0;
+}
+
+.presenter .measurement-track strong,
+.presenter .impact-stat h3 {
+  color: #244940;
+  font-size: clamp(15px, 1.4vw, 20px);
+}
+
+.presenter .measurement-track small,
+.presenter .impact-stat p {
+  color: var(--slide-copy);
+  font-size: clamp(12px, 1.08vw, 15px);
+}
+
+.presenter .impact-stat {
+  border-color: #b9cbd0;
+}
+
+.presenter .impact-stat > div {
+  color: #285e76;
+  font-size: clamp(53px, 6.7vw, 98px);
+  line-height: 1;
+}
+
+.presenter .care-item {
+  border-left: 3px solid #6e9b86;
+}
+
+.presenter .care-item h3 {
+  color: #1b3734;
+  font-size: clamp(17px, 1.7vw, 24px);
+  margin-bottom: 6px;
+}
+
+.presenter .legacy-resource span {
+  font-size: clamp(13px, 1.18vw, 17px);
+  color: var(--slide-copy);
+}
+
+.presenter .legacy-close {
+  border-top: 1px solid #d6c3af;
+  padding-top: 14px;
+}
+
+.presenter .legacy-close p,
+.presenter .legacy-close p > span {
+  color: #263e33;
+  font-size: clamp(18px, 2vw, 28px);
+}
+
+.presenter-controls {
+  background: #fcfaf1;
+  border-color: #d7dacc;
+  padding: 9px var(--slide-edge) 10px;
+}
+
+.presenter .chapter-progress button.current {
+  background: color-mix(in srgb, var(--slide-accent) 28%, white);
+}
+
+.presenter .chapter-progress button.current > span,
+.presenter .play-control {
+  background: var(--slide-accent);
+}
+
+.presenter .control-chapter > span {
+  color: var(--slide-accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.presenter .control-chapter strong,
+.presenter .control-chapter small,
+.presenter .time-readout > span {
+  color: #53675b;
+}
+
+.presenter .time-readout {
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes slide-detail-in {
+  from { opacity: .35; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .presenter .activity-tabs button,
+  .presenter .collab-steps > *,
+  .presenter .budget-row,
+  .presenter .measurement-track > *,
+  .presenter .next-steps > div > * {
+    animation: slide-detail-in .4s calc(var(--detail-start, .24s) + var(--detail-step, 0s)) cubic-bezier(.22, 1, .36, 1) both;
+  }
+
+  .presenter .activity-tabs button:nth-child(2),
+  .presenter .collab-steps > :nth-child(2),
+  .presenter .budget-row:nth-child(3),
+  .presenter .measurement-track > :nth-child(2),
+  .presenter .next-steps > div > :nth-child(2) { --detail-step: .06s; }
+
+  .presenter .activity-tabs button:nth-child(3),
+  .presenter .collab-steps > :nth-child(3),
+  .presenter .budget-row:nth-child(4),
+  .presenter .measurement-track > :nth-child(3),
+  .presenter .next-steps > div > :nth-child(3) { --detail-step: .12s; }
+
+  .presenter .activity-tabs button:nth-child(4),
+  .presenter .collab-steps > :nth-child(4),
+  .presenter .budget-row:nth-child(5),
+  .presenter .measurement-track > :nth-child(4),
+  .presenter .next-steps > div > :nth-child(4) { --detail-step: .18s; }
+
+  .presenter .activity-tabs button:nth-child(5),
+  .presenter .collab-steps > :nth-child(5),
+  .presenter .measurement-track > :nth-child(5),
+  .presenter .next-steps > div > :nth-child(5) { --detail-step: .24s; }
+
+  .presenter .next-steps > div > :nth-child(6) { --detail-step: .30s; }
+  .presenter .next-steps > div > :nth-child(7) { --detail-step: .36s; }
+  .presenter .budget-row { --detail-start: .32s; }
+  .presenter .next-steps > div > * { --detail-start: .45s; }
+}
+
+@media (max-width: 800px) {
+  .presenter-scenes {
+    margin: 7px 8px;
+    border-radius: 12px;
+  }
+
+  .presenter .section-content,
+  .presenter .hero-inner {
+    width: 90%;
+  }
+
+  .presenter h2,
+  .presenter .legacy-content h2 {
+    font-size: clamp(29px, 7vw, 45px);
+  }
+
+  .presenter .activity-body,
+  .presenter .demo-layout,
+  .presenter .budget-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .presenter .activity-tabs button {
+    border-radius: 8px;
+    border-bottom-color: #cbd6cb;
+  }
+
+  .presenter .activity-panel {
+    border-radius: 12px;
+  }
+
+  .presenter .phase ul,
+  .presenter .team-group:last-child {
+    min-height: 0;
+  }
+
+  .presenter .hero-bottom {
+    gap: 12px;
+  }
+}
+
+@media (min-width: 801px) and (max-height: 800px) {
+  .presenter {
+    --slide-gap: 14px;
+  }
+
+  .presenter-scene {
+    padding-block: 22px;
+  }
+
+  .presenter h2,
+  .presenter .legacy-content h2 {
+    font-size: clamp(31px, min(3.7vw, 6svh), 51px);
+  }
+
+  .presenter .activity-visual svg {
+    max-height: min(20svh, 145px);
+  }
+
+  .presenter .demo-conversation {
+    min-height: 220px;
+  }
+}
